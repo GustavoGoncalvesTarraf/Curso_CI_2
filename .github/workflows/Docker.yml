@@ -32,6 +32,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v5.1.0
       with:
-        context: ./DockerFile
-        push: true
-        tags: gustavogoncalves/go_ci:${{ github.ref_name }}
+         file: ./Dockerfile
+         context: .
+         push: true
+         tags: gustavogoncalves/go_ci:${{ github.ref_name }}
